@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+//分别创建：主页 / 帮助页 / 关于页 的 路由。 
+Route::get('/',['as'=>'home','uses'=>'StaticPagesController@forwardHomeView']); 
+Route::get('/help',['as'=>'help','uses'=>'StaticPagesController@forwardHelpView']); 
+Route::get('/about',['as'=>'about','uses'=>'StaticPagesController@forwardAboutView']); 
