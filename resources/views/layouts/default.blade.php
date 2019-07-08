@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>  
-        <title>Weibo - Laravel 新手入门教程</title>
+        <title>@yield('title','weibo') - Laravel 新手入门教程</title>
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/home.css">
         <link rel="stylesheet" href="/css/flooter.css">
@@ -12,7 +12,7 @@
           <div class="container">
            @yield('content')
           <!--引入底部页面-->
-           @include('layouts.flooter');
+           @include('layouts.flooter')
           </div>
     </body>
 </html>
