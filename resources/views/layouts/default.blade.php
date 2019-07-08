@@ -4,20 +4,15 @@
         <title>Weibo - Laravel 新手入门教程</title>
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/flooter.css">
     </head>
     <body>  
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div class="container">
-                      <a class="navbar-brand" href="/">Weibo App</a>
-                      <ul class="navbar-nav justify-content-end">
-                        <li class="nav-item"><a class="nav-link" href="/help">帮助</a></li>
-                        <li class="nav-item" ><a class="nav-link" href="#">登录</a></li>
-                      </ul>
-                    </div>
-            </nav>
-              
-            <div class="container">
-            @yield('content')
-            </div>
+          <!--引入顶部页面-->
+           @include('layouts.header')
+          <div class="container">
+           @yield('content')
+          <!--引入底部页面-->
+           @include('layouts.flooter');
+          </div>
     </body>
 </html>
